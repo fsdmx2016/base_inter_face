@@ -1,17 +1,17 @@
 pipeline {
     agent any
+
     stages {
-        stage('build'){
+        stage('Build') {
             steps {
-             sh 'pip install -r requirments.txt'
+                sh 'pip install -r requirments.txt'
             }
         }
-    }
-     stages {
-        stage('test'){
+        stage('Test'){
             steps {
-             sh 'python3 main.py'
+                sh 'python3 main.py'
             }
         }
+
     }
-}
+  }
