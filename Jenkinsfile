@@ -1,6 +1,4 @@
 pipeline{
-    agent{
-    label:'agent2'}
     stages('build'){
         steps{
         sh 'pip install -r requirments.txt'}
@@ -10,5 +8,4 @@ pipeline{
         steps{
         sh 'python3 main.py '}
 
-    }
 }
