@@ -19,4 +19,7 @@ class TestDemo(unittest.TestCase):
         unittest.TestCase.assertEqual(self, result.get('url'),'http://httpbin.org/get')
         print("请求成功！")
 
-
+    def test_get_data2(self):
+        result = http_request.send_get('http://httpbin.org/get', None, None)
+        unittest.TestCase.assertEqual(self, result.get('url'), 'http://httpbin.org/get')
+        print("请求成功！")
